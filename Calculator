@@ -1,0 +1,53 @@
+# Modular Calculator
+
+# Function for addition
+def add_numbers(num1, num2):
+    return num1 + num2
+
+# Function for subtraction
+def subtract_numbers(num1, num2):
+    return num1 - num2
+
+# Function for multiplication
+def multiply_numbers(num1, num2):
+    return num1 * num2
+
+# Function for division
+def divide_numbers(num1, num2):
+    return num1 / num2
+
+# Ask the user to enter two numbers
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+
+# Display the operation choices
+print("\nChoose operation:")
+print("1 - Addition")
+print("2 - Subtraction")
+print("3 - Multiplication")
+print("4 - Division")
+
+choice = input("Enter choice: ")
+
+# Call the correct function
+if choice == "1":
+    result = add_numbers(num1, num2)
+    print("Result:", result)
+
+elif choice == "2":
+    result = subtract_numbers(num1, num2)
+    print("Result:", result)
+
+elif choice == "3":
+    result = multiply_numbers(num1, num2)
+    print("Result:", result)
+
+elif choice == "4":
+    if num2 == 0:
+        print("Cannot divide by zero.")
+    else:
+        result = divide_numbers(num1, num2)
+        print("Result:", result)
+
+else:
+    print("Invalid choice.")
